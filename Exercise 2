@@ -1,0 +1,24 @@
+//Ler um número inteiro n.Escrever a soma de todos os números pares de 2
+//até n.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+int main()
+{
+	int N, contador = 2, soma = 0;
+
+	printf("Digite o valor de N:  ");
+	scanf_s("%i", &N);
+
+	while (contador <= N)
+	{
+		if (soma += contador++ && soma % 2 == 0)
+		{
+			soma += contador++;
+			printf("\nOs valores de N sao:  %i\n", soma);
+		}
+	}
+	
+}
