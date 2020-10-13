@@ -1,0 +1,62 @@
+//Faça um algoritmo que, para um número indeterminado de pessoas : leia a
+//idade de cada uma, sendo que a idade 0 (zero)indica o fim da leitura e não
+//deve ser considerada.A seguir calcule :
+//• o número de pessoas;
+//• a idade média do grupo;
+//• a menor idade e a maior idade.
+
+
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <conio.h>
+#include <ctype.h>
+#include <stdbool.h>
+#include <locale.h>
+
+int idade, n, soma = 0, i, maiorIDADE = 0, menorIDADE = 999;
+float mediaIDADE;
+
+int main() {
+
+	
+
+	while (idade <= 0) 
+	{
+		setlocale(LC_ALL, "Portuguese");
+		printf("Digite numero de pessoas: ");
+		scanf_s("%i", &n);
+		for (i = 1; i <= n; i++) 
+		{
+			printf("Digite sua idade: ");
+			scanf_s("%i", &idade);
+
+			if (idade <= 0)
+			{
+				printf("Valor 0 lido");
+				return 0;
+			}
+
+			soma = soma + idade;
+			mediaIDADE = soma / i;
+
+			if (idade > maiorIDADE) 
+			{
+				maiorIDADE = idade;
+			}
+			if (idade < menorIDADE) 
+			{
+				menorIDADE = idade;
+			}
+			
+
+		}
+		printf("\nTotal de pessoas lidas é: %i", n);
+		printf("\nMedia das idades é: %.2f", mediaIDADE);
+		printf("\nMaior idade é: %i", maiorIDADE);
+		printf("\nMenor idade é: %i", menorIDADE);
+		
+	}
+	
+}
