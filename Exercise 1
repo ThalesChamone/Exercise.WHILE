@@ -1,0 +1,23 @@
+//Ler um número inteiro n. Escrever a soma de todos os números de 1 até n.
+
+
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+
+int contador = 1, N, soma = 0;
+
+int main() {
+	printf("Digite valor de N: ");
+	scanf_s("%i", &N);
+
+
+	while (contador <= N) 
+	{
+		contador++;
+		soma = soma + contador;
+		printf("\nValor de N: %i", soma);
+
+	
+	}
+}
