@@ -1,0 +1,50 @@
+//Escreva um algoritmo que apresente quatro opções(a) consulta saldo, (b)
+//saque, (c)depósito e(d) sair.O saldo deve iniciar em R$ 0, 00. A cada saque
+//ou depósito o valor do saldo deve ser atualizado.
+
+#include <stdio.h>
+#include <stdlib.h>
+#include <locale.h>
+
+
+int opcao;
+float saque, deposito, saldo = 0;
+
+
+int main() {
+
+	printf("Escolha uma das opcoes: [1] Consulta saldo [2] Saque [3] Deposito [4] Sair: ");
+	scanf_s("%i", &opcao);
+
+	while (saldo != 4) 
+	{
+		if (opcao == 1) 
+		{
+			printf("\nSeu saldo %c: %.2f reais", 130,saldo);
+		}
+		if (opcao == 2) 
+		{
+			printf("Digite valor do saque: ");
+			scanf_s("%f", &saque);
+			if ((saldo - saque) <= 0) {
+				printf("\nVoce nao possui saldo!!");
+			}
+			else {
+				saldo = saldo - saque;
+				printf("Seu saldo %c: %.2f reais", 130, saldo);
+			}
+		}
+		if (opcao == 3) 
+		{
+			printf("\nValor a ser depositado: ");
+			scanf_s("%f", &deposito);
+
+			saldo = saldo + deposito;
+			printf("Seu saldo %c: %.2f reais", 130, saldo);
+		}
+
+		printf("\nEscolha uma das opcoes: [1] Consulta saldo [2] Saque [3] Deposito [4] Sair: ");
+		scanf_s("%i", &opcao);
+		
+	}
+}
