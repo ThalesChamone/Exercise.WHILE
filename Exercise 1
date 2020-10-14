@@ -5,19 +5,20 @@
 #include <conio.h>
 #include <stdlib.h>
 
-int contador = 1, N, soma = 0;
+int contador = 0, N, soma = 0;
 
 int main() {
-	printf("Digite valor de N: ");
+	printf("Digite um numero: ");
 	scanf_s("%i", &N);
 
 
-	while (contador <= N) 
+	while (contador < N) 
 	{
 		contador++;
 		soma = soma + contador;
-		printf("\nValor de N: %i", soma);
+		
 
 	
 	}
+	printf("\nValor de N: %i", soma);
 }
